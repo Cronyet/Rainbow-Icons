@@ -1,0 +1,44 @@
+﻿<Window x:Class="Interaga.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interaga.Demo"
+        xmlns:icons="clr-namespace:Interaga.Icons;assembly=Interaga"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="40">
+            <Label  Content="Size: " VerticalAlignment="Center"/>
+            <Slider x:Name="SizeSlider" Minimum="30" Maximum="430" Value="40"
+                    Width="100" VerticalAlignment="Center"/>
+            <Label/>
+            <Label  Content="Margin: " VerticalAlignment="Center"/>
+            <Slider x:Name="MarginSlider" Minimum="0" Maximum="120" Value="5"
+                    Width="100" VerticalAlignment="Center"/>
+            <Label/>
+            <Button Content="Change Light/Dark Background" VerticalAlignment="Center"
+                    Click="Background_Click"/>
+        </StackPanel>
+        <ScrollViewer>
+            <WrapPanel Margin="10,0">
+                <icons:WDOS     Width="{Binding Value, ElementName=SizeSlider}"
+                                Height="{Binding Value, ElementName=SizeSlider}"
+                                Margin="{Binding Value, ElementName=MarginSlider}"
+                                ToolTip="WDOS"/>
+                <icons:Search   Width="{Binding Value, ElementName=SizeSlider}"
+                                Height="{Binding Value, ElementName=SizeSlider}"
+                                Margin="{Binding Value, ElementName=MarginSlider}"
+                                ToolTip="Search"/>
+                <icons:Desks    Width="{Binding Value, ElementName=SizeSlider}"
+                                Height="{Binding Value, ElementName=SizeSlider}"
+                                Margin="{Binding Value, ElementName=MarginSlider}"
+                                ToolTip="Desks"/>
+                <icons:Terminal Width="{Binding Value, ElementName=SizeSlider}"
+                                Height="{Binding Value, ElementName=SizeSlider}"
+                                Margin="{Binding Value, ElementName=MarginSlider}"
+                                ToolTip="Terminal"/>
+            </WrapPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
