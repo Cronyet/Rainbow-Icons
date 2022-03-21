@@ -1,0 +1,282 @@
+﻿<UserControl x:Class="Interaga.Icons.Terminal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Interaga.Icons"
+             mc:Ignorable="d" RenderTransformOrigin="0.5,0.5"
+             d:DesignHeight="100" d:DesignWidth="100">
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1"/>
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+            <BeginStoryboard>
+                <Storyboard Timeline.DesiredFrameRate="90">
+                    <!--<ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="Back1" From="#FF272727"
+                                    Storyboard.TargetProperty="Color" BeginTime="0:0:0" To="#FF2AFADF">
+                        <ColorAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </ColorAnimation.EasingFunction>
+                    </ColorAnimation>
+                    <ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="Back2" From="#FF002633"
+                                    Storyboard.TargetProperty="Color" BeginTime="0:0:0" To="#FF4C83FF">
+                        <ColorAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </ColorAnimation.EasingFunction>
+                    </ColorAnimation>-->
+
+                    <DoubleAnimation From="1" To="0.7" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseInOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation From="1" To="0.7" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseInOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+
+                    <!--#region Bar 向下移出视线 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="Bar" From="-5" To="20" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region Bar 变为透明 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Bar"
+                                     From="1" To="0" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右上向右移动 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightUp" From="0" To="50" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右上逐渐透明 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="RightUp"
+                                     From="1" To="0" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+
+                    <!--#region 右下向右移动 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightDown" From="0" To="50" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右下逐渐透明 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="RightDown"
+                                     From="1" To="0" Duration="0:0:0.2" BeginTime="0:0:0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+
+                    <!--#region 右上瞬移到左侧 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightUp" From="50" To="-20" Duration="0:0:0" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右上从透明到正常 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="RightUp"
+                                     From="0" To="1" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右上从左侧进入 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightUp" From="-20" To="0" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右下瞬移到左侧 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightDown" From="50" To="-20" Duration="0:0:0" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右下从透明到正常 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="RightDown"
+                                     From="0" To="1" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region 右下从左侧进入 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RightDown" From="-20" To="0" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+
+                    <!--#region Bar 复原 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="Bar" From="20" To="-20" Duration="0:0:0" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region Bar 入场 -->
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="Bar" From="-20" To="-5" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                    <!--#region Bar 恢复正常 -->
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Bar"
+                                     From="0" To="1" Duration="0:0:0.2" BeginTime="0:0:0.2">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <!--#endregion-->
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+            <BeginStoryboard>
+                <Storyboard Timeline.DesiredFrameRate="90">
+                    <DoubleAnimation From="0.7" To="1" Duration="0:0:0.25" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseInOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation From="0.7" To="1" Duration="0:0:0.25" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseInOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+
+                    <!--<ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="Back1" From="#FF2AFADF"
+                                    Storyboard.TargetProperty="Color" BeginTime="0:0:0" To="#FF272727">
+                        <ColorAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </ColorAnimation.EasingFunction>
+                    </ColorAnimation>
+                    <ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="Back2" From="#FF4C83FF"
+                                    Storyboard.TargetProperty="Color" BeginTime="0:0:0" To="#FF002633">
+                        <ColorAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </ColorAnimation.EasingFunction>
+                    </ColorAnimation>-->
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Viewbox Stretch="UniformToFill">
+        <Grid Width="100" Height="100" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.15"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Path x:Name="Back" Width="100" Height="100" Opacity="0.9" Data="M10 20Q10 10 20 10L80 10Q90 10 90 20L90 80Q90 90 80 90L20 90Q10 90 10 80Z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop x:Name="Back1" Color="#FF2AFADF" Offset="0"/>
+                        <GradientStop x:Name="Back2" Color="#FF4C83FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+            </Path>
+            <!--<Path Width="100" Height="100" Data="M10 20Q10 10 20 10L80 10Q90 10 90 20Z">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+            </Path>-->
+            <Path x:Name="RightDown" Width="100" Height="100" Data="M30 70A1 1 0 0120 60L35 45A1 1 0 0145 55L30 70Z">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0" Y="-5"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                        <!--<GradientStop Color="#FF2AFADF" Offset="0"/>
+                        <GradientStop Color="#FF4C83FF" Offset="1"/>-->
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+            </Path>
+            <Path x:Name="RightUp" Width="100" Height="100" Data="M30 30A1 1 0 0020 40L35 55A1 1 0 0045 45Z">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0" Y="-5"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                        <!--<GradientStop Color="#FF2AFADF" Offset="0"/>
+                        <GradientStop Color="#FF4C83FF" Offset="1"/>-->
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+            </Path>
+            <Path x:Name="Bar" Width="100" Height="100" RenderTransformOrigin="0.5,0.5"
+                  Data="M50 85A1 1 0 0150 70L75 70A1 1 0 0175 85Z">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0" Y="-5"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+            </Path>
+        </Grid>
+    </Viewbox>
+</UserControl>

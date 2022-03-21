@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="Interaga.Icons.Desks"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Interaga.Icons"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+            <BeginStoryboard>
+                <Storyboard Timeline.DesiredFrameRate="90">
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="LT_Screen" From="0" To="10" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="LT_Screen" From="0" To="10" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RD_Screen" From="0" To="-10" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="RD_Screen" From="0" To="-10" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                                     Storyboard.TargetName="MID_Screen" From="1" To="0.8" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                                     Storyboard.TargetName="MID_Screen" From="1.5" To="1.1" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+            <BeginStoryboard>
+                <Storyboard Timeline.DesiredFrameRate="90">
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="LT_Screen" From="10" To="0" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="LT_Screen" From="10" To="0" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)"
+                                     Storyboard.TargetName="RD_Screen" From="-10" To="0" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)"
+                                     Storyboard.TargetName="RD_Screen" From="-10" To="0" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+                                     Storyboard.TargetName="MID_Screen" From="0.8" To="1" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                                     Storyboard.TargetName="MID_Screen" From="1.1" To="1.5" Duration="0:0:0.3">
+                        <DoubleAnimation.EasingFunction>
+                            <BackEase EasingMode="EaseOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Viewbox Stretch="UniformToFill">
+        <Grid Width="100" Height="100" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Path Opacity="0.8" RenderTransformOrigin="0.5,0.5" x:Name="LT_Screen"
+                    Data="M10 15Q10 10 15 10L50 10Q55 10 55 15L55 38Q55 43 50 43L15 43Q10 43 10 38L10 15Z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Opacity="0.95" RenderTransformOrigin="0.5,0.5" x:Name="MID_Screen"
+                    Data="M20 38Q20 33 25 33L75 33Q80 33 80 38L80 61Q80 66 75 66L25 66Q20 66 20 61L20 43Z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1.5"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF2AFADF" Offset="0"/>
+                        <GradientStop Color="#FF4C83FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Opacity="0.95" RenderTransformOrigin="0.5,0.5" x:Name="RD_Screen"
+                    Data="M45 61Q45 56 50 56L85 56Q90 56 90 61L90 84Q90 89 85 89L50 89Q45 89 45 84L45 61Z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF929292" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Interaga.Icons.WDOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Interaga.Icons"
+             mc:Ignorable="d" x:Name="Icon_WDOS"
+             d:DesignHeight="101" d:DesignWidth="101">
+    <UserControl.Effect>
+        <DropShadowEffect ShadowDepth="-4" BlurRadius="15" Color="Black"/>
+    </UserControl.Effect>
+    <Viewbox Stretch="UniformToFill">
+        <Grid Width="101" Height="101" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0"/>
+                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation From="0" To="60" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation From="1" To="0.7" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleX)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation From="1" To="0.7" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleY)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation From="60" To="0" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation From="0.7" To="1" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleX)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation From="0.7" To="1" Duration="0:0:0.25" AutoReverse="False" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleY)">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseInOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Path Width="100" Height="100" Data="M 0,50 A 50,50 45 1 1 0,51 Z" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF92FFC0" Offset="0"/>
+                        <GradientStop Color="#FF002661" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <!--<Path Width="100" Height="100" Fill="{Binding ThemeColor, ElementName=WDOS_Icon}" Data="M 30,85.1 A 40,40 45 0 1 30,15.9 Z" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+            <!--<Path Width="100" Height="100" Fill="{Binding ThemeColor, ElementName=WDOS_Icon}" Data="M 50,10.5 A 40,40 45 0 1 50,90.5 Z" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+            <!--<Path Width="100" Height="100" Fill="Yellow" Data="M 40,89.25 A 40,40 45 0 0 50,90.5 Z" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+            <!--<Path Width="100" Height="100" Fill="Red" Data="M 40 11.75 50.5 10.5 50.5 90.5 40 89.25 40 11.75 Z" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+            <Path Width="100" Height="100" Fill="{Binding ThemeColor, ElementName=Icon_WDOS}" Data="M 40,11.75 A 40,40 45 0 1 50,10.5 L 50 90.5 A 40,40 45 0 1 40,89.25 M 50,10.5 A 40,40 45 0 1 50,90.5 Z M 30,85.1 A 40,40 45 0 1 30,15.9 Z" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.8"/>
+        </Grid>
+    </Viewbox>
+</UserControl>
