@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="LICENSE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LICENSE" />
+  </ItemGroup>
+
 </Project>
