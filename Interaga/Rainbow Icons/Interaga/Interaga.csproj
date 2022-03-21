@@ -13,15 +13,8 @@
     <PackageIcon>logo2-blue.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="LICENSE" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="LICENSE" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="C:\Users\CATROL\OneDrive\图片\Icon\Project\Catrol\Rainbow Icons\logo2-blue.png">
