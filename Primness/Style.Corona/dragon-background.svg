@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' color='#fff' viewBox='0 0 512 512'>
+  <path d='M256,512' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M384,477.7' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M477.7,384' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M512,256' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M477.7,128' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M384,34.3' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M256,0' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M128,34.3' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M34.3,128' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M0,256' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M34.3,384' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M128,477.7' stroke='currentColor' />
+  <path d='M256,256' stroke='currentColor' />
+  <path d='M254.67,35.34' stroke='currentColor' />
+  <path d='M146.29,64.9' stroke='currentColor' />
+  <path d='M256,0C114.62,0,0,114.62,0,256S114.62,512,256,512,512,397.38,512,256,397.38,0,256,0Zm.18,366.9-.18-.08c62,76.39,109.71,80.28,109.71,80.28-106.91,1.6-122.08-33.55-164.52-95.74,13.86,86.7,46.67,117.7,53.58,123.38-92.14-51.72-89.46-89.19-95.09-163.93-35.13,91.92-13,135.92-13,135.92-54.85-91.8-33.75-122.88-1.11-190.73-76.39,62-79,109.71-79,109.71C65,258.8,98.76,242.42,161,200,63.78,215.52,36.57,256,36.57,256c52.08-93.39,89.55-90.66,164.62-96.32-91.92-35.13-135.92-13.39-135.92-13.39C157.07,91.44,256,145.18,256,145.18,196.6,72.05,149.83,65.37,146,64.93,253.08,63.13,311,157.8,311,157.8,295.49,60.62,254.67,35.34,254.67,35.34,348.06,87.41,345.33,124.88,351,200,386.12,108,365.66,64.81,365.66,64.81c54.84,91.79,32.72,122.9.08,190.75C442.12,193.51,446,145.84,446,145.84c1.59,106.92-32.47,122.6-94.66,165C448.54,295.34,475.75,256,475.75,256c-52.08,93.39-89.8,90.66-164.88,96.32,91.93,35.13,135.86,13.39,135.86,13.39C355,420.51,323.9,399.5,256.18,366.9Z' fill='currentColor' />
+</svg>
