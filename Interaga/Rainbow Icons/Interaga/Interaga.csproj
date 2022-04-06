@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\CATROL\OneDrive\图片\Icon\Project\Catrol\Rainbow Icons\logo2-blue.png">
+    <None Update="logo2-blue.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
