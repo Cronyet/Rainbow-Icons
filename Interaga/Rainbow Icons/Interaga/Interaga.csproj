@@ -1,26 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>Dynesshely</Authors>
-    <Company>Catrol</Company>
-    <Description>A nice Icon library for everyone.</Description>
-    <Copyright>Copyright © 2022-present Catrol</Copyright>
-    <PackageProjectUrl>https://github.com/Catrol-org/Rainbow-Icons</PackageProjectUrl>
-    <PackageIcon>logo2-blue.png</PackageIcon>
-    <RepositoryType>git</RepositoryType>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Dynesshely</Authors>
+		<Company>Catrol</Company>
+		<Description>A nice Icon library for everyone.</Description>
+		<Copyright>Copyright © 2022-present Catrol</Copyright>
+		<PackageProjectUrl>https://github.com/Catrol-org/Rainbow-Icons</PackageProjectUrl>
+		<PackageIcon>logo2-blue.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
+		<FileVersion>1.0.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2005-07-16"))).TotalDays).$([System.Math]::Floor($([MSBuild]::Divide($([System.DateTime]::UtcNow.TimeOfDay.TotalSeconds), 1.32))))</FileVersion>
+		<Version>1.0.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2005-07-16"))).TotalDays).$([System.DateTime]::UtcNow.ToString("mmss"))</Version>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Update="logo2-blue.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="logo2-blue.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
